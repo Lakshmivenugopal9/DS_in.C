@@ -4,7 +4,6 @@
 
 int stack[MAX];
 int top = -1;
-
 int isFull(void)  { return top == MAX - 1; }
 int isEmpty(void) { return top == -1; }
 
@@ -59,11 +58,8 @@ void checkPalindrome(void)
 
     for (i = 0; i < len; i++)          /* pop and compare      */
         if (str[i] != cstack[ctop--])
-        {
-            isPal = 0;
-            break;
-        }
-
+        {   isPal = 0;
+            break;}
     if (isPal) printf("%s is a PALINDROME\n", str);
     else       printf("%s is NOT a palindrome\n", str);
 }
@@ -85,8 +81,7 @@ void demoOverflowUnderflow(void)
 }
 
 int main(void)
-{
-    int choice, item, val;
+{    int choice, item, val;
     while (1)
     {
         printf("\n===== STACK MENU (MAX = %d) =====\n", MAX);
